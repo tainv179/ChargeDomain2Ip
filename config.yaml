@@ -1,0 +1,613 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+proxies:
+  - name: Singapore 1
+    server: sing1.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: shopvpn4g.vn
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: Singapore 2 - [TLS]
+    server: sing2.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: data1shopvpn4g
+    udp: true
+  - name: Singapore 3
+    server: sing3.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: shopvpn4g.vn
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: Singapore 4 - [TLS]
+    server: sing4.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: data1shopvpn4g
+    udp: true
+  - name: 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 1⚡👑
+    server: hnvip1.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: /dt3shopvpn4g
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 2⚡👑
+    server: hnvip2.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: dt3shopvpn4g
+    udp: true
+  - name: 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 3⚡👑
+    server: hnvip3.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: /dt3shopvpn4g
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 4⚡👑
+    server: hnvip4.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: dt3shopvpn4g
+    udp: true
+  - name: 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 5⚡👑
+    server: hnvip5.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: /dt3shopvpn4g
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 7⚡👑
+    server: hcmvip1.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: /dt3shopvpn4g
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 8⚡👑
+    server: hcmvip2.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: dt3shopvpn4g
+    udp: true
+  - name: 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 1⚡
+    server: data2hn1.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: /dt2shopvpn4g
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 2⚡
+    server: data2hn2.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: dt2shopvpn4g
+    udp: true
+  - name: 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 3⚡
+    server: data2hn3.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: /dt2shopvpn4g
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 4⚡
+    server: data2hn4.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: dt2shopvpn4g
+    udp: true
+  - name: 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 5⚡
+    server: data2hcm1.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: /dt1shopvpn4g
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 6⚡
+    server: data2hcm2.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: data1shopvpn4g
+    udp: true
+  - name: 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 7⚡
+    server: data2hcm3.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: /dt1shopvpn4g
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 8⚡
+    server: data2hcm4.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: data1shopvpn4g
+    udp: true
+  - name: 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 1⚡
+    server: data1hn1.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: /dt1shopvpn4g
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 2⚡
+    server: data1hn2.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: dt1shopvpn4g
+    udp: true
+  - name: 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 3⚡
+    server: data1hn3.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: /dt1shopvpn4g
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 4⚡
+    server: data1hn4.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: dt1shopvpn4g
+    udp: true
+  - name: 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 5⚡
+    server: data1hn5.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: /dt1shopvpn4g
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 6⚡
+    server: data1hn6.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: data1shopvpn4g
+    udp: true
+  - name: 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 7⚡
+    server: data1hcm1.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: ws
+    ws-opts:
+      path: /dt1shopvpn4g
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 8⚡
+    server: data1hcm2.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dl.kgvn.garenanow.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: data1shopvpn4g
+    udp: true
+  - name: Japan JP2
+    server: japanvip2.shopvpn4g.vn
+    port: 80
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: www.linemo.jp
+    network: ws
+    ws-opts:
+      path: shopvpn4g.vn
+      headers:
+        Host: www.linemo.jp
+    udp: true
+  - name: Japan 4
+    server: japanvip4.shopvpn4g.vn
+    port: 443
+    type: vmess
+    uuid: acca86b8-fd00-4bba-9a06-a11dee74ef26
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: www.linemo.jp
+    network: grpc
+    grpc-opts:
+      grpc-service-name: shopvpn4g.vn
+    udp: true
+proxy-groups:
+  - name: FASTSSH-SSHKIT-HOWDY
+    type: select
+    proxies:
+      - Singapore 1
+      - Singapore 2 - [TLS]
+      - Singapore 3
+      - Singapore 4 - [TLS]
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 1⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 2⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 3⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 4⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 5⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 7⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 8⚡👑
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 1⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 2⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 3⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 4⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 5⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 6⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 7⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 8⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 1⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 2⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 3⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 4⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 5⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 6⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 7⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 8⚡
+      - Japan JP2
+      - Japan 4
+      - LOAD-BALANCE
+      - BEST-PING
+      - FALLBACK
+      - DIRECT
+  - name: LOAD-BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - Singapore 1
+      - Singapore 2 - [TLS]
+      - Singapore 3
+      - Singapore 4 - [TLS]
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 1⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 2⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 3⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 4⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 5⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 7⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 8⚡👑
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 1⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 2⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 3⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 4⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 5⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 6⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 7⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 8⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 1⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 2⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 3⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 4⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 5⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 6⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 7⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 8⚡
+      - Japan JP2
+      - Japan 4
+  - name: BEST-PING
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+      - Singapore 1
+      - Singapore 2 - [TLS]
+      - Singapore 3
+      - Singapore 4 - [TLS]
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 1⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 2⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 3⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 4⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 5⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 7⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 8⚡👑
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 1⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 2⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 3⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 4⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 5⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 6⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 7⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 8⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 1⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 2⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 3⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 4⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 5⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 6⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 7⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 8⚡
+      - Japan JP2
+      - Japan 4
+  - name: FALLBACK
+    type: fallback
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - Singapore 1
+      - Singapore 2 - [TLS]
+      - Singapore 3
+      - Singapore 4 - [TLS]
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 1⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 2⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 3⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 4⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 5⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 7⚡👑
+      - 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 𝐕𝐈𝐏𝐒𝐄𝐑𝐕𝐄𝐑 8⚡👑
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 1⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 2⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 3⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 4⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 5⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 6⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 7⚡
+      - 𝐃𝐓𝟐 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 8⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 1⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 2⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 3⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 4⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 5⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 6⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 7⚡
+      - 𝐃𝐓𝟏 𝐕𝐢ệ𝐭 𝐍𝐚𝐦 8⚡
+      - Japan JP2
+      - Japan 4
+rules:
+  - MATCH,FASTSSH-SSHKIT-HOWDY
