@@ -1,1 +1,1 @@
-# SupportClash4Magisk
+# Charge domain name to ip address.
