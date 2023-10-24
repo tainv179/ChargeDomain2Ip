@@ -19,14 +19,12 @@ for proxy in config['proxies']:
         content = response.text
         ip = re.findall(r'[0-9]+(?:\.[0-9]+){3}', content)
         try:
-            # Chuyển địa chỉ IP thành kiểu string giữa dấu nháy kép
             proxy['server'] = str(ip[1])
             print(ip[1])
         except IndexError:
             print(f"Insufficient IP addresses found for {domain_name}")
     except requests.exceptions.RequestException:
         pass
-
-# Ghi lại vào file output.yaml với kiểu giữ nguyên dấu "
+        
 with open('output.yaml', 'w') as fp:
     yaml.dump(config, fp)
