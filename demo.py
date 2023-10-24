@@ -3,6 +3,7 @@ import re
 from ruamel.yaml import YAML
 
 yaml = YAML()
+yaml.preserve_quotes = True
 yaml.indent(mapping=2, sequence=4, offset=2)
 
 file_name = 'config.yaml'
@@ -27,5 +28,5 @@ for proxy in config['proxies']:
         pass
 
 # Ghi lại vào file output.yaml với kiểu giữ nguyên dấu "
-with open('output5.yaml', 'w') as fp:
+with open('output.yaml', 'w') as fp:
     yaml.dump(config, fp)
